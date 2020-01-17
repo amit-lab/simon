@@ -17,9 +17,11 @@ function colorPicker() {
 }
 
 
-$("body").keypress(function () {
+function start() {
+    levelNumber = 1;
+    gamePattern = [];
     run();
-});
+}
 
 function createGamePattern(levelNo) {
     setTimeout(function () {
@@ -51,7 +53,7 @@ $(".btn").click(function (event) {
     if (current2 !== current1[1]) {
         let over = new Audio("static/sounds/wrong.mp3");
         over.play();
-        $("h1").html("Game Over!!!<br>Press any key to restart the game!");
+        $("h1").html("Game Over!!!<br>Press start button to restart the game!");
         gameOver();
     }
     if (gamePattern.length === 0) {
