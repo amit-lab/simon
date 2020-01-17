@@ -56,7 +56,7 @@ $(".btn").click(function (event) {
         $("h1").html("Game Over!!!<br>Press start button to restart the game!");
         gameOver();
     }
-    if (gamePattern.length === 0) {
+    else if (gamePattern.length === 0) {
         levelNumber++;
         run();
     }
